@@ -1,0 +1,222 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/index.css">
+  <script type="module" src="src/index.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="searchBarContainer invisible">
+      <input type="text"  class="searchBar" placeholder="Search . . .">
+    </div>
+    <div class="logoContainer">
+      <a href="/" class="logo">Fake Stack Overflow</a>
+    </div>
+    <div class="searchBarContainer">
+      <input type="text" class="searchBar" id="realSearchBar" placeholder="Search . . .">
+    </div>
+
+
+  </header>
+  
+  <!-- MAIN SECTION -->
+  <div id="main" class="main">
+  
+    <!-- SIDE BAR -->
+    <div class="sideBar">
+      <nav role="navigation">
+        <ol class="navLinks">
+          <li>
+            <div class="sideBarLinkContainer" id="qButtonContainer">
+              <button class="sideBarLink  sideBarQuestion" id="qButton"> Questions </button>    
+            </div>
+          </li>
+          <li>
+            <div class="sideBarLinkContainer" id="tButtonContainer">
+              <button class="sideBarLink sideBarTags" id="tButton">Tags</button>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- MAIN BODY -->
+    <div class="mainBody">
+
+
+      <!--  Homepage -->
+      <div class="" id="qPage">
+        
+        <div class="bodyHeadingContainer">
+          <div class="qHeading" id="qHeading1">
+            <h2 id="questionOrSearch">All Questions</h2>
+
+            <!-- Ask Question Button For Homepage -->
+            <button class="askQuestionButton" id="askQBtn">Ask Question</button>
+
+          </div>
+
+          <div class="qHeading" id="qHeading2">
+            <a id="numQuestions"><span id="quesNumHeader">0</span> Questions<a>
+            <button class="newestButton" id="newestButton">
+              Newest
+            </button>
+            <button class="activeButton" id="activeButton">
+              Active
+            </button>
+            <button class="unansweredButton" id="unansweredButton">
+              Unanswered
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Question List -->
+        <div id="qPageQuestions">
+        <!-- SAMPLE QUESTIONS
+          <div class="qPageSection">
+            <div class="qCounter">
+              <span class="ansCounter">
+                22 answers
+              </span>
+              <span class="viewCounter">
+                10 views
+              </span>
+            </div>
+            <div class="qTitleTags">
+              <a href="#" class="qTitle questionTitle"> 
+                Question Title 
+              </a>
+              <div class="qTagsContainer">
+                <div class="qTag">
+                  android-studio
+                </div>
+                <div class="qTag">
+                  shared-preferences
+                </div>
+                <div class="qTag">
+                  javascript
+                </div>
+              </div>
+            </div>
+            <div class="qUserData">
+              <span class="qUser">saltyPeter</span>
+              <span class="qDate"> asked Jan 14 at 09:06 PM</span>
+            </div>
+          </div>-->
+        </div>
+      </div>
+
+      <!-- Tags Page -->
+      <div class="tpage noDisplay" id="tPage">
+      <div class="tagHeader">
+        <h3><span id="tagNum">0</span> Tags</h3>
+        <h3>All Tags</h3>
+        <button type="button" class="askQuestionButton" id="askQuestionBtnInTag"> Ask Question </button>
+      </div>
+
+      <div class="tagContainerRow">
+        <!-- SAMPLE TAGS
+        <div class="tagContainer">
+          <div class="tagText">
+            <a class="tagLink" href="#">android-studio</a>
+            <p class="tagText"><span class="questionNum">1</span> question</p>
+          </div>
+        </div>
+
+        <div class="tagContainer">
+          <div class="tagText">
+            <a class="tagLink" href="#">android-studio</a>
+            <p class="tagText"><span class="questionNum">1</span> question</p>
+          </div>
+        </div>
+
+        <div class="tagContainer">
+          <div class="tagText">
+            <a class="tagLink" href="#">android-studio</a>
+            <p class="tagText"><span class="questionNum">1</span> question</p>
+          </div>
+        </div>
+        <div class="tagContainer">
+          <div class="tagText">
+            <a class="tagLink" href="#">android-studio</a>
+            <p class="tagText"><span class="questionNum">1</span> question</p>
+          </div>
+        </div>
+        <div class="tagContainer">
+          <div class="tagText">
+            <a class="tagLink" href="#">android-studio</a>
+            <p class="tagText"><span class="questionNum">1</span> question</p>
+          </div>
+        </div>-->
+      </div>
+      </div>
+
+      <!-- Ask Question Page-->
+      <div class="askQuesPage noDisplay" id="askQuesPage">
+        <h1>Ask your question:</h1>
+        <form class="quesForm" id="quesForm">
+    
+            <label for="quesTitle">Question Title (No more than 100 characters): <span class="required">*</span></label>
+            <em>Limit title to 100 characters or less</em> 
+            <input type="text" id="quesTitle" name="quesTitle" class="quesTitle" required>
+          
+    
+            <label for="quesBody">Describe Your Question: <span class="required">*</span></label>
+            <em>Add details</em> 
+            <textarea id="quesBody" name="quesBody" class="qBody" rows="10" required></textarea>
+    
+            <label for = "quesTags" >Tags:<span class="required">*</span></label>
+            <em>add keywords separated by space</em> 
+            <input type = "text" id = "quesTags" name = "quesTag" class = "qTags" required>
+    
+            <label for="userName">Username: <span class="required">*</span></label>
+            <input type="text" id="QuName" name="userName" class="uName" required>
+    
+            <button type="button" class="quesSubmit" id="qSubmit">Submit</button>
+            <button type="button" class="quesCancel" id="qCancel">Cancel</button>
+        </form>
+      </div>
+      
+      <!-- Answer Page -->
+      <div class="noDisplay" id="answerPage">
+        <div class="aPageHeader">
+          <div class="aPageHeader-1">
+            <h3 id="numAnswers">2 answers</h3>
+            <h3 id="qTitle">Programmatically navigate using React router</h3>
+            <button class="askQuestionButton" type="button" id="askQuestionBtnAnsrPage"> Ask Question </button>
+          </div>
+          <div class="aPageHeader-2">
+          <div class="numViewsContainer">
+            <h3 id="numViews">10 views</h3>
+          </div>
+          <p id="qText">the alert shows the proper index for the li clicked, and when I alert the variable within the last function I\'m calling, moveToNextImage(stepClicked), the same value shows but the animation isn\'t happening. This works many other ways, but I\'m trying to pass the index value of the list item clicked to use for the math to calculate.</p>
+          <div class="qAskedBy">
+            <span id="userAnsrPage">JoJi John</span>
+            <span id="dateAnsrPage">asked Jan 01, 2022 at 20:05</span>
+          </div>
+          </div>
+        </div>
+        <div id="aPageAnswers">
+          <div class="aPageAnswer">
+            <p class="aPageText">React Router is mostly a wrapper around the history library. history handles interaction with the browser\'s window.history for you with its browser and hash histories. It also provides a memory history which is useful for environments that don\'t have a global history. This is particularly useful in mobile app development (react-native) and unit testing with Node.</p>
+            <div class="aPageAskedBy">
+              <span class="userAnsrPage">hamkalo</span>
+              <span class="dateAnsrPage">answered Mar 02, 2022 at 15:30</span>
+            </div>
+          </div>
+        <button id = "ansButton" class = "ansButton">Answer Question</button>
+      </div>
+
+
+      </div>    
+    </div>
+
+
+
+      <script src=" index.js"></script> 
+  </body>
+</html>
